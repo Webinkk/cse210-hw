@@ -39,7 +39,7 @@ public class Journal
             string line;
             while ((line = reader.ReadLine()) != null)
             {
-                var parts = line.Split("~|~");
+                var parts = line.Split("|");
                 if (parts.Length == 3)
                 {
                     _entries.Add(new Entry(parts[0], parts[1], parts[2]));
